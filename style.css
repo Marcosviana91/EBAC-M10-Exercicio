@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.container img {
+    width: 100%;
+}
+
+h2 {
+    color: rgb(17, 128, 255);
+    font-style: italic;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid rgb(17, 128, 255);
+
+}
+
+p {
+    text-align: justify;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(17, 128, 255);
+    padding: 16px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-style: italic;
+}
+
+header nav li {
+    list-style: none;
+    display: inline;
+    padding-left: 16px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#sobre_a_loja {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+#sobre_a_loja>div {
+    padding-left: 24px;
+}
+
+#produtos {
+    margin-top: 24px;
+}
+
+#produtos>#produto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2%;
+}
+
+.produtos-item p {
+    padding: 12px 0;
+}
+
+.produtos-item button {
+    background-color: rgb(17, 128, 255);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+
+    padding: 8px;
+    cursor: pointer;
+}
+
+.produtos-item button:hover {
+    background-color: rgb(39, 76, 118);
+    ;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+
+    .container {
+        max-width: 90vw;
+    }
+
+    #sobre_a_loja {
+        display: block;
+    }
+
+    #sobre_a_loja>div {
+        padding: 24px 0 0 0;
+    }
+
+    #produtos>#produto {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .produtos-item p {
+        padding: 24px 0 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .container {
+        max-width: 90vw;
+    }
+
+    header nav li {
+        display: block;
+        padding-left: 0;
+    }
+
+    #sobre_a_loja {
+        display: block;
+    }
+
+    #sobre_a_loja>div {
+        padding-left: 0px;
+    }
+
+    #produtos>#produto {
+        display: block;
+    }
+    
+    .produtos-item {
+        padding: 12px 0;
+    }
+    .produtos-item h3 {
+        font-size: 1.6em;
+    }
+
+    .produtos-item button {
+        font-size: 1.2em;
+    }
+
+}
